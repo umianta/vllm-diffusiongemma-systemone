@@ -1,0 +1,18 @@
+{
+  "model": "diffusiongemma",
+  "state": {
+    "from": "maria@contoso.com",
+    "subject": "Notes from today's design review",
+    "body": "Hi team, attached are the notes. Please review the API section before Thursday."
+  },
+  "questions": {
+    "spam": {
+      "type": "noul",
+      "instructions": "Is this email spam?",
+      "criteria": {
+        "true": "unsolicited, scam or bulk marketing",
+        "false": "legitimate personal or work mail"
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "model": "diffusiongemma",
+  "state": {
+    "amount_usd": 4890,
+    "merchant": "electronics, online",
+    "card_country": "US",
+    "ip_country": "RO",
+    "account_age_days": 2,
+    "txns_last_hour": 9,
+    "shipping_matches_billing": false
+  },
+  "questions": {
+    "fraud": {
+      "type": "noul",
+      "instructions": "Is this transaction likely fraudulent?"
+    },
+    "risk": {
+      "type": "score",
+      "instructions": "Fraud risk level",
+      "criteria": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    },
+    "action": {
+      "type": "choice",
+      "instructions": "What should happen?",
+      "criteria": {
+        "approve": "let it through",
+        "challenge": "ask for 3-D Secure / OTP",
+        "block": "decline"
+      }
+    }
+  }
+}

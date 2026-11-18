@@ -1,0 +1,44 @@
+{
+  "id": "decision-ae3d4f4bdc69f92f",
+  "object": "structured_decision",
+  "created": 1794975359,
+  "model": "diffusiongemma",
+  "answers": {
+    "first_tool": {
+      "type": "choice",
+      "choice": "calculator",
+      "probabilities": {
+        "search": 2.5557219897313245e-05,
+        "calculator": 0.9994854050085538,
+        "calendar": 0.0004082673169709235,
+        "email": 3.873149887065457e-05,
+        "none": 4.20389557073963e-05
+      },
+      "confidence": 0.9994406254724653
+    },
+    "needs_calendar": {
+      "type": "noul",
+      "noul": 0.9952573846443681,
+      "probabilities": {
+        "yes": 0.9952573846443681,
+        "no": 0.0047426153556318585
+      },
+      "confidence": 0.9906186189365851
+    }
+  },
+  "usage": {
+    "input_tokens": 172,
+    "output_tokens": 4
+  },
+  "diagnostics": {
+    "first_tool": {
+      "label_mass": 0.9999551974087224,
+      "argmax_is_label": true
+    },
+    "needs_calendar": {
+      "label_mass": 0.9953391295765762,
+      "argmax_is_label": true
+    }
+  },
+  "joint": null
+}

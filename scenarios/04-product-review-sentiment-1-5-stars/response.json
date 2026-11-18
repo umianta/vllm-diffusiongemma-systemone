@@ -1,0 +1,51 @@
+{
+  "id": "decision-ac20de2c1fc5b263",
+  "object": "structured_decision",
+  "created": 1794975358,
+  "model": "diffusiongemma",
+  "answers": {
+    "stars": {
+      "type": "score",
+      "score": 0.02165364568452489,
+      "legend": {
+        "0": "one",
+        "1": "two",
+        "2": "three",
+        "3": "four",
+        "4": "five"
+      },
+      "probabilities": {
+        "0": 0.9851133609556011,
+        "1": 0.010858518893288056,
+        "2": 0.0024003519181393144,
+        "3": 0.0005166499769277632,
+        "4": 0.001111118256043729
+      },
+      "confidence": 0.9832457133299392
+    },
+    "refund": {
+      "type": "noul",
+      "noul": 0.9999550016018891,
+      "probabilities": {
+        "yes": 0.9999550016018891,
+        "no": 4.499839811091498e-05
+      },
+      "confidence": 0.998610522453498
+    }
+  },
+  "usage": {
+    "input_tokens": 140,
+    "output_tokens": 4
+  },
+  "diagnostics": {
+    "stars": {
+      "label_mass": 0.998104129230518,
+      "argmax_is_label": true
+    },
+    "refund": {
+      "label_mass": 0.9986554603494785,
+      "argmax_is_label": true
+    }
+  },
+  "joint": null
+}

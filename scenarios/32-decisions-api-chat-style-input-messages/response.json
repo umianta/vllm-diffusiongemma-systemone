@@ -1,0 +1,46 @@
+{
+  "model": "diffusiongemma",
+  "answers": [
+    {
+      "type": "choice",
+      "name": "domain",
+      "choice": "restaurant",
+      "probabilities": [
+        {
+          "value": "restaurant",
+          "probability": 0.9997936458652006
+        },
+        {
+          "value": "flight",
+          "probability": 4.6178358682208816e-05
+        },
+        {
+          "value": "weather",
+          "probability": 0.00014337478047525272
+        },
+        {
+          "value": "music",
+          "probability": 1.6800995642065028e-05
+        }
+      ],
+      "confidence": 0.9996348760876578
+    },
+    {
+      "type": "predicate",
+      "name": "has_time",
+      "probability": 0.9880751838900185
+    }
+  ],
+  "usage": {
+    "input_tokens": 125,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 4,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 129
+  }
+}

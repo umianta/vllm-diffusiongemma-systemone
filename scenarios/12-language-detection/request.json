@@ -1,0 +1,17 @@
+{
+  "model": "diffusiongemma",
+  "state": "¿Dónde está la estación de tren más cercana? Necesito llegar al aeropuerto.",
+  "questions": {
+    "language": {
+      "type": "choice",
+      "instructions": "What language is the text in?",
+      "criteria": {
+        "english": null,
+        "spanish": null,
+        "french": null,
+        "german": null,
+        "portuguese": null
+      }
+    }
+  }
+}

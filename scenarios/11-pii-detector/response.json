@@ -1,0 +1,55 @@
+{
+  "id": "decision-a80a89f49615c5c9",
+  "object": "structured_decision",
+  "created": 1794975359,
+  "model": "diffusiongemma",
+  "answers": {
+    "pii": {
+      "type": "noul",
+      "noul": 0.9999660538023999,
+      "probabilities": {
+        "yes": 0.9999660538023999,
+        "no": 3.3946197600064244e-05
+      },
+      "confidence": 0.9976945743945093
+    },
+    "ssn": {
+      "type": "noul",
+      "noul": 0.9998899284090794,
+      "probabilities": {
+        "yes": 0.9998899284090794,
+        "no": 0.00011007159092065178
+      },
+      "confidence": 0.997987157734096
+    },
+    "redact": {
+      "type": "choice",
+      "choice": "redact",
+      "probabilities": {
+        "store": 0.00045950354218690767,
+        "redact": 0.9729597817330797,
+        "drop": 0.026580714724733334
+      },
+      "confidence": 0.9724172534495565
+    }
+  },
+  "usage": {
+    "input_tokens": 264,
+    "output_tokens": 6
+  },
+  "diagnostics": {
+    "pii": {
+      "label_mass": 0.9977284434814029,
+      "argmax_is_label": true
+    },
+    "ssn": {
+      "label_mass": 0.9980970198609651,
+      "argmax_is_label": true
+    },
+    "redact": {
+      "label_mass": 0.9994423939265435,
+      "argmax_is_label": true
+    }
+  },
+  "joint": null
+}

@@ -1,0 +1,63 @@
+{
+  "id": "decision-88099e4b492da99e",
+  "object": "structured_decision",
+  "created": 1794975359,
+  "model": "diffusiongemma",
+  "answers": {
+    "fraud": {
+      "type": "noul",
+      "noul": 0.9999408663229311,
+      "probabilities": {
+        "yes": 0.9999408663229311,
+        "no": 5.913367706894432e-05
+      },
+      "confidence": 0.9992400227210381
+    },
+    "risk": {
+      "type": "score",
+      "score": 2.999697898896533,
+      "legend": {
+        "0": "low",
+        "1": "medium",
+        "2": "high",
+        "3": "critical"
+      },
+      "probabilities": {
+        "0": 2.659204579850155e-06,
+        "1": 7.531208945998694e-05,
+        "2": 0.00014349931080749837,
+        "3": 0.9997785293951527
+      },
+      "confidence": 0.9995536413296467
+    },
+    "action": {
+      "type": "choice",
+      "choice": "block",
+      "probabilities": {
+        "approve": 1.0207766679411892e-05,
+        "challenge": 0.0002862966011872955,
+        "block": 0.9997034956321333
+      },
+      "confidence": 0.9996316598100418
+    }
+  },
+  "usage": {
+    "input_tokens": 332,
+    "output_tokens": 6
+  },
+  "diagnostics": {
+    "fraud": {
+      "label_mass": 0.9992991149521969,
+      "argmax_is_label": true
+    },
+    "risk": {
+      "label_mass": 0.9997750621173652,
+      "argmax_is_label": true
+    },
+    "action": {
+      "label_mass": 0.9999281428719561,
+      "argmax_is_label": true
+    }
+  },
+  "joint": null
+}

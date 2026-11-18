@@ -1,0 +1,34 @@
+{
+  "model": "diffusiongemma",
+  "state": {
+    "document": "Privacy Notice - ShopLite App\nWe collect your name, email, precise location, and contacts list. We share this data with advertising partners. Data is kept indefinitely. To delete your account, mail a signed letter to our head office. We do not offer a way to download your data. By opening the app you consent to all of the above."
+  },
+  "questions": {
+    "retention_limit": {
+      "type": "noul",
+      "instructions": "Does the notice set a limited data retention period?"
+    },
+    "easy_deletion": {
+      "type": "noul",
+      "instructions": "Can users delete their data easily online?"
+    },
+    "portability": {
+      "type": "noul",
+      "instructions": "Can users export or download their data?"
+    },
+    "shares_ads": {
+      "type": "noul",
+      "instructions": "Is personal data shared with advertisers?"
+    },
+    "compliance": {
+      "type": "score",
+      "instructions": "How well does this notice meet GDPR expectations?",
+      "criteria": [
+        "poor",
+        "weak",
+        "fair",
+        "good"
+      ]
+    }
+  }
+}

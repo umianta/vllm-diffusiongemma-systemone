@@ -1,0 +1,88 @@
+{
+  "id": "decision-9b718c14dc5acd4b",
+  "object": "structured_decision",
+  "created": 1794975360,
+  "model": "diffusiongemma",
+  "answers": {
+    "retention_limit": {
+      "type": "noul",
+      "noul": 3.8463186542303074e-06,
+      "probabilities": {
+        "yes": 3.8463186542303074e-06,
+        "no": 0.9999961536813459
+      },
+      "confidence": 0.9974252883003644
+    },
+    "easy_deletion": {
+      "type": "noul",
+      "noul": 7.861444329817696e-08,
+      "probabilities": {
+        "yes": 7.861444329817696e-08,
+        "no": 0.9999999213855568
+      },
+      "confidence": 0.9914621998284806
+    },
+    "portability": {
+      "type": "noul",
+      "noul": 3.150944284780736e-07,
+      "probabilities": {
+        "yes": 3.150944284780736e-07,
+        "no": 0.9999996849055715
+      },
+      "confidence": 0.9991858678751279
+    },
+    "shares_ads": {
+      "type": "noul",
+      "noul": 0.9999873706966869,
+      "probabilities": {
+        "yes": 0.9999873706966869,
+        "no": 1.262930331305828e-05
+      },
+      "confidence": 0.999366089483991
+    },
+    "compliance": {
+      "type": "score",
+      "score": 0.0009552304521416263,
+      "legend": {
+        "0": "poor",
+        "1": "weak",
+        "2": "fair",
+        "3": "good"
+      },
+      "probabilities": {
+        "0": 0.9991383659442837,
+        "1": 0.0007940497327633387,
+        "2": 4.1572249480492276e-05,
+        "3": 2.6012073472434348e-05
+      },
+      "confidence": 0.9956125249714032
+    }
+  },
+  "usage": {
+    "input_tokens": 581,
+    "output_tokens": 10
+  },
+  "diagnostics": {
+    "retention_limit": {
+      "label_mass": 0.997429124730613,
+      "argmax_is_label": true
+    },
+    "easy_deletion": {
+      "label_mass": 0.9914622777717355,
+      "argmax_is_label": true
+    },
+    "portability": {
+      "label_mass": 0.9991861827131271,
+      "argmax_is_label": true
+    },
+    "shares_ads": {
+      "label_mass": 0.9993787109408562,
+      "argmax_is_label": true
+    },
+    "compliance": {
+      "label_mass": 0.9964711184225737,
+      "argmax_is_label": true
+    }
+  },
+  "joint": null
+}

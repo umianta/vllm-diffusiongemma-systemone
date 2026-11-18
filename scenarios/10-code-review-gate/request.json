@@ -1,0 +1,30 @@
+{
+  "model": "diffusiongemma",
+  "state": {
+    "diff": "- query = \"SELECT * FROM users WHERE id = %s\"\n- cur.execute(query, (user_id,))\n+ query = f\"SELECT * FROM users WHERE id = {request.args['id']}\"\n+ cur.execute(query)"
+  },
+  "questions": {
+    "security": {
+      "type": "noul",
+      "instructions": "Does the change introduce a security vulnerability?"
+    },
+    "kind": {
+      "type": "choice",
+      "instructions": "What kind of issue is it?",
+      "criteria": {
+        "injection": "SQL or command injection",
+        "leak": "secret or data leak",
+        "performance": "slow code",
+        "none": "no issue"
+      }
+    },
+    "merge": {
+      "type": "choice",
+      "instructions": "Review verdict",
+      "criteria": {
+        "approve": "ship it",
+        "changes": "request changes"
+      }
+    }
+  }
+}

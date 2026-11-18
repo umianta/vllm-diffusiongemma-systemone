@@ -1,0 +1,43 @@
+{
+  "id": "decision-ad5517c5f50238bd",
+  "object": "structured_decision",
+  "created": 1794975361,
+  "model": "diffusiongemma",
+  "answers": {
+    "category": {
+      "type": "choice",
+      "choice": "meals",
+      "probabilities": {
+        "meals": 0.9991822605328206,
+        "travel": 0.0007042030540333819,
+        "lodging": 9.447947217769007e-05,
+        "office": 1.9056940968374716e-05
+      },
+      "confidence": 0.9985906702619817
+    },
+    "reimbursable": {
+      "type": "noul",
+      "noul": 0.9942436143499193,
+      "probabilities": {
+        "yes": 0.9942436143499193,
+        "no": 0.005756385650080702
+      },
+      "confidence": 0.9196711036009131
+    }
+  },
+  "usage": {
+    "input_tokens": 679,
+    "output_tokens": 4
+  },
+  "diagnostics": {
+    "category": {
+      "label_mass": 0.9994079255665294,
+      "argmax_is_label": true
+    },
+    "reimbursable": {
+      "label_mass": 0.9249957357807472,
+      "argmax_is_label": true
+    }
+  },
+  "joint": null
+}

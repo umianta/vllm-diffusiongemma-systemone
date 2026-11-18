@@ -1,0 +1,30 @@
+{
+  "model": "diffusiongemma",
+  "state": {
+    "document": "From: CFO\nTo: Finance team\nSubject: Re: Q4 budget\nThanks all. Final reminder: every department head must submit revised Q4 forecasts in the shared sheet by Friday 5 pm. Late submissions will be excluded from the board pack.\n--\nFrom: Priya (Marketing)\nSounds good, I'll get ours in tomorrow.\n--\nFrom: Tom (Engineering)\nQuick question - do we include contractor costs or only FTEs?"
+  },
+  "questions": {
+    "action_required": {
+      "type": "noul",
+      "instructions": "Does the thread ask department heads to do something?"
+    },
+    "deadline": {
+      "type": "noul",
+      "instructions": "Is there a specific deadline?"
+    },
+    "open_question": {
+      "type": "noul",
+      "instructions": "Is there an unanswered question in the thread?"
+    },
+    "priority": {
+      "type": "score",
+      "instructions": "How urgent is replying?",
+      "criteria": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    }
+  }
+}

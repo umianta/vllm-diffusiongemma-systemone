@@ -1,0 +1,17 @@
+{
+  "model": "diffusiongemma",
+  "state": "Hi, I ordered a laptop last Tuesday and the tracking page hasn't updated since. Where is it?",
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "What does the customer want?",
+      "criteria": {
+        "status": "where is my order / tracking",
+        "refund": "money back",
+        "cancel": "cancel an order",
+        "technical": "product not working",
+        "human": "asks for a person"
+      }
+    }
+  }
+}

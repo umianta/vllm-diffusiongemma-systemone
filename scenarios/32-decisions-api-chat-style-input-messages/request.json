@@ -1,0 +1,35 @@
+{
+  "model": "diffusiongemma",
+  "input": [
+    {
+      "role": "user",
+      "content": "Can you book me a table for two at 7pm tomorrow?"
+    }
+  ],
+  "questions": [
+    {
+      "type": "choice",
+      "name": "domain",
+      "instructions": "Which assistant skill handles this?",
+      "choices": [
+        {
+          "value": "restaurant"
+        },
+        {
+          "value": "flight"
+        },
+        {
+          "value": "weather"
+        },
+        {
+          "value": "music"
+        }
+      ]
+    },
+    {
+      "type": "predicate",
+      "name": "has_time",
+      "instructions": "Did the user give a time?"
+    }
+  ]
+}

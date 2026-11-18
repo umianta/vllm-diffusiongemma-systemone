@@ -1,0 +1,64 @@
+{
+  "id": "decision-ad86ba5246576bec",
+  "object": "structured_decision",
+  "created": 1794975361,
+  "model": "diffusiongemma",
+  "answers": {
+    "is_error": {
+      "type": "noul",
+      "noul": 0.999991110548708,
+      "probabilities": {
+        "yes": 0.999991110548708,
+        "no": 8.889451291876784e-06
+      },
+      "confidence": 0.9852319873196743
+    },
+    "component": {
+      "type": "choice",
+      "choice": "database",
+      "probabilities": {
+        "database": 0.9371014361992879,
+        "network": 0.04880587631637611,
+        "auth": 0.010491167202663318,
+        "frontend": 0.003601520281672661
+      },
+      "confidence": 0.9345103678043459
+    },
+    "severity": {
+      "type": "score",
+      "score": 2.997286870950425,
+      "legend": {
+        "0": "low",
+        "1": "medium",
+        "2": "high",
+        "3": "critical"
+      },
+      "probabilities": {
+        "0": 7.319082194661944e-06,
+        "1": 0.0001343541282592368,
+        "2": 0.002422463546472421,
+        "3": 0.9974358632430737
+      },
+      "confidence": 0.9956900477358056
+    }
+  },
+  "usage": {
+    "input_tokens": 960,
+    "output_tokens": 6
+  },
+  "diagnostics": {
+    "is_error": {
+      "label_mass": 0.9852407455692929,
+      "argmax_is_label": true
+    },
+    "component": {
+      "label_mass": 0.997235018222306,
+      "argmax_is_label": true
+    },
+    "severity": {
+      "label_mass": 0.9982496964751281,
+      "argmax_is_label": true
+    }
+  },
+  "joint": null
+}

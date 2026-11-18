@@ -1,0 +1,68 @@
+{
+  "id": "decision-8fefa55bee4524da",
+  "object": "structured_decision",
+  "created": 1794975358,
+  "model": "diffusiongemma",
+  "answers": {
+    "insult": {
+      "type": "noul",
+      "noul": 0.9989011498500113,
+      "probabilities": {
+        "yes": 0.9989011498500113,
+        "no": 0.0010988501499886135
+      },
+      "confidence": 0.992584905910693
+    },
+    "threat": {
+      "type": "noul",
+      "noul": 0.98437984504968,
+      "probabilities": {
+        "yes": 0.98437984504968,
+        "no": 0.015620154950319926
+      },
+      "confidence": 0.9403515288956548
+    },
+    "spam": {
+      "type": "noul",
+      "noul": 3.036406633884692e-06,
+      "probabilities": {
+        "yes": 3.036406633884692e-06,
+        "no": 0.9999969635933662
+      },
+      "confidence": 0.9956860292520153
+    },
+    "action": {
+      "type": "choice",
+      "choice": "remove",
+      "probabilities": {
+        "allow": 7.82968591238521e-05,
+        "review": 0.0020873160224565293,
+        "remove": 0.9978343871184195
+      },
+      "confidence": 0.9977024059807774
+    }
+  },
+  "usage": {
+    "input_tokens": 262,
+    "output_tokens": 8
+  },
+  "diagnostics": {
+    "insult": {
+      "label_mass": 0.9936768078200063,
+      "argmax_is_label": true
+    },
+    "threat": {
+      "label_mass": 0.9552730418288855,
+      "argmax_is_label": true
+    },
+    "spam": {
+      "label_mass": 0.9956890525688598,
+      "argmax_is_label": true
+    },
+    "action": {
+      "label_mass": 0.9998677324219871,
+      "argmax_is_label": true
+    }
+  },
+  "joint": null
+}

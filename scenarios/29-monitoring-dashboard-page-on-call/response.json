@@ -1,0 +1,47 @@
+{
+  "id": "decision-b9ec2be4f7da7530",
+  "object": "structured_decision",
+  "created": 1794975363,
+  "model": "diffusiongemma",
+  "answers": {
+    "page": {
+      "type": "noul",
+      "noul": 0.9996915332522406,
+      "probabilities": {
+        "yes": 0.9996915332522406,
+        "no": 0.00030846674775938655
+      },
+      "confidence": 0.9947166916518011
+    },
+    "health": {
+      "type": "score",
+      "score": 1.9085064843625819,
+      "legend": {
+        "0": "healthy",
+        "1": "degraded",
+        "2": "failing"
+      },
+      "probabilities": {
+        "0": 1.1728364405703889e-06,
+        "1": 0.09149116996453709,
+        "2": 0.9085076571990224
+      },
+      "confidence": 0.9082801991581989
+    }
+  },
+  "usage": {
+    "input_tokens": 628,
+    "output_tokens": 4
+  },
+  "diagnostics": {
+    "page": {
+      "label_mass": 0.9950236233528406,
+      "argmax_is_label": true
+    },
+    "health": {
+      "label_mass": 0.9997496355269864,
+      "argmax_is_label": true
+    }
+  },
+  "joint": null
+}

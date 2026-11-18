@@ -1,0 +1,23 @@
+{
+  "model": "diffusiongemma",
+  "state": {
+    "user": "What's 18% of 2,340 and can you put a reminder on my calendar to pay it Friday?"
+  },
+  "questions": {
+    "first_tool": {
+      "type": "choice",
+      "instructions": "Which tool should run first?",
+      "criteria": {
+        "search": "web search",
+        "calculator": "arithmetic",
+        "calendar": "create or read events",
+        "email": "send mail",
+        "none": "answer directly"
+      }
+    },
+    "needs_calendar": {
+      "type": "noul",
+      "instructions": "Will the calendar tool be needed at some point?"
+    }
+  }
+}

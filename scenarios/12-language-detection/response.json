@@ -1,0 +1,31 @@
+{
+  "id": "decision-84d5bf4dfa26a690",
+  "object": "structured_decision",
+  "created": 1794975359,
+  "model": "diffusiongemma",
+  "answers": {
+    "language": {
+      "type": "choice",
+      "choice": "spanish",
+      "probabilities": {
+        "english": 1.9880971429618298e-05,
+        "spanish": 0.9984403577048002,
+        "french": 0.0003650081899466197,
+        "german": 0.0008848159802295014,
+        "portuguese": 0.0002899371535940242
+      },
+      "confidence": 0.9982023426740937
+    }
+  },
+  "usage": {
+    "input_tokens": 70,
+    "output_tokens": 2
+  },
+  "diagnostics": {
+    "language": {
+      "label_mass": 0.9997616131711126,
+      "argmax_is_label": true
+    }
+  },
+  "joint": null
+}

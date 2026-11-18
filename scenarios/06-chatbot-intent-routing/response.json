@@ -1,0 +1,31 @@
+{
+  "id": "decision-ac51798f15cbab9d",
+  "object": "structured_decision",
+  "created": 1794975359,
+  "model": "diffusiongemma",
+  "answers": {
+    "intent": {
+      "type": "choice",
+      "choice": "status",
+      "probabilities": {
+        "status": 0.9999189225045186,
+        "refund": 2.5673634600144087e-05,
+        "cancel": 2.692712074855978e-05,
+        "technical": 9.228389669973972e-06,
+        "human": 1.9248350462670775e-05
+      },
+      "confidence": 0.999814544744775
+    }
+  },
+  "usage": {
+    "input_tokens": 97,
+    "output_tokens": 2
+  },
+  "diagnostics": {
+    "intent": {
+      "label_mass": 0.9998956137768829,
+      "argmax_is_label": true
+    }
+  },
+  "joint": null
+}

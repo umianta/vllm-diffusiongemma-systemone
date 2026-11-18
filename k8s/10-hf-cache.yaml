@@ -1,0 +1,32 @@
+# Read-only view of the GPU node's Hugging Face cache, which must already hold
+# nvidia/diffusiongemma-26B-A4B-it-NVFP4 @ ec4ff3df (see course/01-deploy.md).
+#
+# >>> CHANGE ME: hostPath.path = the HF cache directory on YOUR GPU node <<<
+# (usually ~/.cache/huggingface of the user that ran `hf download`).
+# A PV's hostPath is immutable: to change it later, delete the PV/PVC first.
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: systemone-hf-cache
+  labels:
+    app.kubernetes.io/part-of: diffusiongemma-systemone
+spec:
+  capacity: { storage: 200Gi }
+  accessModes: ["ReadOnlyMany"]
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: ""
+  claimRef: { namespace: systemone, name: hf-cache }
+  hostPath:
+    path: /home/superadmin/.cache/huggingface
+    type: Directory
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: hf-cache
+spec:
+  accessModes: ["ReadOnlyMany"]
+  storageClassName: ""
+  volumeName: systemone-hf-cache
+  resources:
+    requests: { storage: 200Gi }

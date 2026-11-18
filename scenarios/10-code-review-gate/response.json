@@ -1,0 +1,56 @@
+{
+  "id": "decision-8bf4bc1750d65cc5",
+  "object": "structured_decision",
+  "created": 1794975359,
+  "model": "diffusiongemma",
+  "answers": {
+    "security": {
+      "type": "noul",
+      "noul": 0.9995693949977893,
+      "probabilities": {
+        "yes": 0.9995693949977893,
+        "no": 0.00043060500221076974
+      },
+      "confidence": 0.20784103610749363
+    },
+    "kind": {
+      "type": "choice",
+      "choice": "injection",
+      "probabilities": {
+        "injection": 0.9932033992924072,
+        "leak": 0.00044374797359573407,
+        "performance": 0.00010892571842171786,
+        "none": 0.00624392701557538
+      },
+      "confidence": 0.2944722058598874
+    },
+    "merge": {
+      "type": "choice",
+      "choice": "changes",
+      "probabilities": {
+        "approve": 6.763657907888052e-05,
+        "changes": 0.9999323634209211
+      },
+      "confidence": 0.981371552643836
+    }
+  },
+  "usage": {
+    "input_tokens": 329,
+    "output_tokens": 6
+  },
+  "diagnostics": {
+    "security": {
+      "label_mass": 0.20793057205193172,
+      "argmax_is_label": false
+    },
+    "kind": {
+      "label_mass": 0.2964873117326015,
+      "argmax_is_label": false
+    },
+    "merge": {
+      "label_mass": 0.981437933748253,
+      "argmax_is_label": true
+    }
+  },
+  "joint": null
+}

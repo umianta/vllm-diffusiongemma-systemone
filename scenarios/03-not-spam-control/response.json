@@ -1,0 +1,28 @@
+{
+  "id": "decision-b1a61d94d8ebc8b8",
+  "object": "structured_decision",
+  "created": 1794975358,
+  "model": "diffusiongemma",
+  "answers": {
+    "spam": {
+      "type": "noul",
+      "noul": 9.537765406544683e-08,
+      "probabilities": {
+        "yes": 9.537765406544683e-08,
+        "no": 0.999999904622346
+      },
+      "confidence": 0.9996595350059484
+    }
+  },
+  "usage": {
+    "input_tokens": 90,
+    "output_tokens": 2
+  },
+  "diagnostics": {
+    "spam": {
+      "label_mass": 0.9996596303511387,
+      "argmax_is_label": true
+    }
+  },
+  "joint": null
+}

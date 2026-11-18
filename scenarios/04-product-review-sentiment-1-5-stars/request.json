@@ -1,0 +1,21 @@
+{
+  "model": "diffusiongemma",
+  "state": "The headphones arrived a week late, the left ear crackles, and support never answered my emails. Returning them.",
+  "questions": {
+    "stars": {
+      "type": "score",
+      "instructions": "How many stars would this reviewer give?",
+      "criteria": [
+        "one",
+        "two",
+        "three",
+        "four",
+        "five"
+      ]
+    },
+    "refund": {
+      "type": "noul",
+      "instructions": "Is the customer asking for or planning a return/refund?"
+    }
+  }
+}

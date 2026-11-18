@@ -1,0 +1,90 @@
+{
+  "id": "decision-9b92c1c88abe7bfc",
+  "object": "structured_decision",
+  "created": 1794975360,
+  "model": "diffusiongemma",
+  "answers": {
+    "auto_renews": {
+      "type": "noul",
+      "noul": 0.9999446695882197,
+      "probabilities": {
+        "yes": 0.9999446695882197,
+        "no": 5.533041178030764e-05
+      },
+      "confidence": 0.9986790010576436
+    },
+    "liability_cap": {
+      "type": "noul",
+      "noul": 0.9999115379335138,
+      "probabilities": {
+        "yes": 0.9999115379335138,
+        "no": 8.846206648628713e-05
+      },
+      "confidence": 0.9993885919915445
+    },
+    "exit": {
+      "type": "noul",
+      "noul": 6.184964247693978e-08,
+      "probabilities": {
+        "yes": 6.184964247693978e-08,
+        "no": 0.9999999381503575
+      },
+      "confidence": 0.9981335731424273
+    },
+    "law": {
+      "type": "choice",
+      "choice": "delaware",
+      "probabilities": {
+        "delaware": 0.9998869053773843,
+        "california": 2.945164679651285e-06,
+        "england": 9.934307180161969e-05,
+        "texas": 1.0806386134298516e-05
+      },
+      "confidence": 0.9998439793924121
+    },
+    "risk": {
+      "type": "score",
+      "score": 1.7895292165504877,
+      "legend": {
+        "0": "low",
+        "1": "medium",
+        "2": "high",
+        "3": "critical"
+      },
+      "probabilities": {
+        "0": 0.01940063823914397,
+        "1": 0.1767011863953023,
+        "2": 0.7988664959414757,
+        "3": 0.005031679424078
+      },
+      "confidence": 0.09649188056290292
+    }
+  },
+  "usage": {
+    "input_tokens": 1216,
+    "output_tokens": 10
+  },
+  "diagnostics": {
+    "auto_renews": {
+      "label_mass": 0.998734261435588,
+      "argmax_is_label": true
+    },
+    "liability_cap": {
+      "label_mass": 0.9994770077930593,
+      "argmax_is_label": true
+    },
+    "exit": {
+      "label_mass": 0.9981336348766359,
+      "argmax_is_label": true
+    },
+    "law": {
+      "label_mass": 0.9999570691597806,
+      "argmax_is_label": true
+    },
+    "risk": {
+      "label_mass": 0.12078598996592771,
+      "argmax_is_label": false
+    }
+  },
+  "joint": null
+}

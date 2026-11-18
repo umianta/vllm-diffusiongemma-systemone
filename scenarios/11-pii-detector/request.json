@@ -1,0 +1,23 @@
+{
+  "model": "diffusiongemma",
+  "state": "Customer Jane Roe (DOB 04/12/1988, SSN 123-45-6789) called about her account ending 4421.",
+  "questions": {
+    "pii": {
+      "type": "noul",
+      "instructions": "Does the text contain personal identifying information?"
+    },
+    "ssn": {
+      "type": "noul",
+      "instructions": "Does the text contain a Social Security number?"
+    },
+    "redact": {
+      "type": "choice",
+      "instructions": "What should we do before storing this?",
+      "criteria": {
+        "store": "store as is",
+        "redact": "mask the personal data",
+        "drop": "do not store"
+      }
+    }
+  }
+}

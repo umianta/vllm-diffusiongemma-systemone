@@ -1,0 +1,44 @@
+{
+  "id": "decision-8e12eda057fd2417",
+  "object": "structured_decision",
+  "created": 1794975362,
+  "model": "diffusiongemma",
+  "answers": {
+    "sign": {
+      "type": "choice",
+      "choice": "stop",
+      "probabilities": {
+        "stop": 0.9994335436817915,
+        "yield": 0.00023052905851552688,
+        "speed": 0.0002864638891898922,
+        "none": 4.946337050317417e-05
+      },
+      "confidence": 0.999169682060637
+    },
+    "action": {
+      "type": "choice",
+      "choice": "stop",
+      "probabilities": {
+        "stop": 0.9993650960868997,
+        "slow": 5.4531901268093295e-05,
+        "go": 0.0005803720118321877
+      },
+      "confidence": 0.9987504617916787
+    }
+  },
+  "usage": {
+    "input_tokens": 647,
+    "output_tokens": 4
+  },
+  "diagnostics": {
+    "sign": {
+      "label_mass": 0.9997359888280491,
+      "argmax_is_label": true
+    },
+    "action": {
+      "label_mass": 0.9993849752231415,
+      "argmax_is_label": true
+    }
+  },
+  "joint": null
+}

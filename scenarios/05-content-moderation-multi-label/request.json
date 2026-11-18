@@ -1,0 +1,29 @@
+{
+  "model": "diffusiongemma",
+  "state": {
+    "comment": "You people are idiots. If I see you at the meetup I'll make you regret it."
+  },
+  "questions": {
+    "insult": {
+      "type": "noul",
+      "instructions": "Does the comment insult someone?"
+    },
+    "threat": {
+      "type": "noul",
+      "instructions": "Does the comment threaten violence or harm?"
+    },
+    "spam": {
+      "type": "noul",
+      "instructions": "Is the comment advertising or spam?"
+    },
+    "action": {
+      "type": "choice",
+      "instructions": "What should moderation do?",
+      "criteria": {
+        "allow": "fine to publish",
+        "review": "send to a human",
+        "remove": "clear violation, remove"
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+# DiffusionGemma-26B-A4B (NVFP4) on upstream vLLM v0.34.0 (multi-arch; the
+# structured-diffusion / Jev PR vllm-project/vllm#57250 is in every release >= v0.31.0).
+#
+# GB10 / DGX Spark (k3s): runtimeClassName nvidia, NO nvidia.com/gpu request
+# (the device plugin advertises 0 GPUs). Single GPU, unified memory: make sure
+# other GPU pods leave room (gpu-memory-utilization 0.5 ~= 60 GiB).
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: diffusiongemma
+  labels:
+    app.kubernetes.io/part-of: diffusiongemma-systemone
+spec:
+  replicas: 1
+  strategy: { type: Recreate }        # never two copies on one GPU
+  selector:
+    matchLabels: { app: diffusiongemma }
+  template:
+    metadata:
+      labels: { app: diffusiongemma }
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8000"
+        prometheus.io/path: /metrics
+    spec:
+      runtimeClassName: nvidia
+      containers:
+        - name: vllm
+          image: vllm/vllm-openai:v0.34.0
+          imagePullPolicy: IfNotPresent
+          securityContext:
+            runAsUser: 0
+          command: ["vllm", "serve"]
+          args:
+            - /models/hub/models--nvidia--diffusiongemma-26B-A4B-it-NVFP4/snapshots/ec4ff3df205028f4e81c954c2227f9312b3ec2ea
+            - --served-model-name=diffusiongemma
+            - --host=0.0.0.0
+            - --port=8000
+            - '--diffusion-config={"canvas_length": 64}'
+            - --max-logprobs=32
+            - --enable-prefix-caching
+            - --async-scheduling
+            - --attention-backend=TRITON_ATTN   # FlashInfer is rejected for this model
+            - --max-num-seqs=32
+            - --max-model-len=16384
+            - --gpu-memory-utilization=0.5
+            - --no-enable-log-requests
+          env:
+            - { name: NVIDIA_VISIBLE_DEVICES, value: "all" }
+            - { name: NVIDIA_DRIVER_CAPABILITIES, value: "compute,utility" }
+            - { name: HF_HUB_OFFLINE, value: "1" }
+            - { name: VLLM_CACHE_ROOT, value: /tmp/vllm-cache }
+          ports:
+            - { name: http, containerPort: 8000 }
+          resources:
+            requests: { cpu: "4", memory: 16Gi }
+            limits: { memory: 100Gi }
+          volumeMounts:
+            - { name: models, mountPath: /models, readOnly: true }
+            - { name: dshm, mountPath: /dev/shm }
+          startupProbe:
+            httpGet: { path: /health, port: 8000 }
+            periodSeconds: 15
+            failureThreshold: 160            # up to 40 min for first load + compile
+          readinessProbe:
+            httpGet: { path: /health, port: 8000 }
+            periodSeconds: 10
+          livenessProbe:
+            httpGet: { path: /health, port: 8000 }
+            periodSeconds: 30
+            failureThreshold: 10
+      volumes:
+        - name: models
+          persistentVolumeClaim: { claimName: hf-cache, readOnly: true }
+        - name: dshm
+          emptyDir: { medium: Memory, sizeLimit: 8Gi }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: diffusiongemma
+spec:
+  type: NodePort
+  selector: { app: diffusiongemma }
+  ports:
+    - { name: http, port: 8000, targetPort: 8000, nodePort: 30810 }

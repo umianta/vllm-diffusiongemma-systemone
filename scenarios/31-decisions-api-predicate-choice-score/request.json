@@ -1,0 +1,46 @@
+{
+  "model": "diffusiongemma",
+  "input": "My package arrived crushed and the glass inside is broken. I want my money back today.",
+  "questions": [
+    {
+      "type": "predicate",
+      "name": "refund",
+      "instructions": "Is the customer asking for a refund?"
+    },
+    {
+      "type": "choice",
+      "name": "reason",
+      "instructions": "Why are they unhappy?",
+      "choices": [
+        {
+          "value": "damaged",
+          "description": "item arrived broken"
+        },
+        {
+          "value": "late",
+          "description": "delivery delay"
+        },
+        {
+          "value": "wrong",
+          "description": "wrong item"
+        }
+      ]
+    },
+    {
+      "type": "score",
+      "name": "anger",
+      "instructions": "How upset is the customer?",
+      "levels": [
+        {
+          "label": "calm"
+        },
+        {
+          "label": "annoyed"
+        },
+        {
+          "label": "angry"
+        }
+      ]
+    }
+  ]
+}

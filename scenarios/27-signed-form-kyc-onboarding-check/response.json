@@ -1,0 +1,67 @@
+{
+  "id": "decision-a5ee44f1799091df",
+  "object": "structured_decision",
+  "created": 1794975363,
+  "model": "diffusiongemma",
+  "answers": {
+    "signed": {
+      "type": "noul",
+      "noul": 0.9901344246095316,
+      "probabilities": {
+        "yes": 0.9901344246095316,
+        "no": 0.009865575390468437
+      },
+      "confidence": 0.9776694258127685
+    },
+    "tos": {
+      "type": "noul",
+      "noul": 0.9999599200240018,
+      "probabilities": {
+        "yes": 0.9999599200240018,
+        "no": 4.007997599814853e-05
+      },
+      "confidence": 0.9836648191249838
+    },
+    "marketing": {
+      "type": "noul",
+      "noul": 3.5875784540170474e-08,
+      "probabilities": {
+        "yes": 3.5875784540170474e-08,
+        "no": 0.9999999641242154
+      },
+      "confidence": 0.30020391351254083
+    },
+    "complete": {
+      "type": "noul",
+      "noul": 0.007904284838626598,
+      "probabilities": {
+        "yes": 0.007904284838626598,
+        "no": 0.9920957151613734
+      },
+      "confidence": 0.9885772683907269
+    }
+  },
+  "usage": {
+    "input_tokens": 1237,
+    "output_tokens": 8
+  },
+  "diagnostics": {
+    "signed": {
+      "label_mass": 0.9874108015164923,
+      "argmax_is_label": true
+    },
+    "tos": {
+      "label_mass": 0.9837042459675516,
+      "argmax_is_label": true
+    },
+    "marketing": {
+      "label_mass": 0.3002039242825921,
+      "argmax_is_label": false
+    },
+    "complete": {
+      "label_mass": 0.9964535208479616,
+      "argmax_is_label": true
+    }
+  },
+  "joint": null
+}

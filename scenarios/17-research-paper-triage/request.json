@@ -1,0 +1,37 @@
+{
+  "model": "diffusiongemma",
+  "state": {
+    "document": "Title: Sparse Mixture-of-Experts Routing for Low-Latency Speech Recognition on Edge Devices\nAbstract: We propose a token-level expert routing scheme for streaming ASR. On LibriSpeech and an in-house far-field set, our 120M-parameter model cuts word error rate by 8% relative and latency by 31% versus a dense baseline on a smartphone NPU. Ablations show the gains come from load-balanced routing. Code and checkpoints are released."
+  },
+  "questions": {
+    "field": {
+      "type": "choice",
+      "instructions": "Primary research area",
+      "criteria": {
+        "speech": "speech / audio",
+        "vision": "images / video",
+        "nlp": "text",
+        "robotics": null,
+        "security": null
+      }
+    },
+    "empirical": {
+      "type": "noul",
+      "instructions": "Does the paper report experimental results?"
+    },
+    "open_source": {
+      "type": "noul",
+      "instructions": "Is code released?"
+    },
+    "relevance": {
+      "type": "score",
+      "instructions": "Relevance to an on-device ML team",
+      "criteria": [
+        "none",
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "model": "diffusiongemma",
+  "state": {
+    "ticket": "Everything is down and we have a demo at noon."
+  },
+  "questions": {
+    "urgent": {
+      "type": "noul",
+      "instructions": "Does the customer need a reply within the hour?"
+    },
+    "team": {
+      "type": "choice",
+      "instructions": "Which team owns this?",
+      "criteria": {
+        "infra": "outages, servers",
+        "billing": "invoices, payments",
+        "product": "features, bugs"
+      }
+    },
+    "severity": {
+      "type": "score",
+      "instructions": "How severe is the impact?",
+      "criteria": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    }
+  }
+}

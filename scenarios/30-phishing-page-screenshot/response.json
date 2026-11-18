@@ -1,0 +1,54 @@
+{
+  "id": "decision-af64a3f211449b50",
+  "object": "structured_decision",
+  "created": 1794975364,
+  "model": "diffusiongemma",
+  "answers": {
+    "phishing": {
+      "type": "noul",
+      "noul": 0.9996760610919246,
+      "probabilities": {
+        "yes": 0.9996760610919246,
+        "no": 0.00032393890807521573
+      },
+      "confidence": 0.992121320762228
+    },
+    "asks_card": {
+      "type": "noul",
+      "noul": 0.9986990148986269,
+      "probabilities": {
+        "yes": 0.9986990148986269,
+        "no": 0.0013009851013731908
+      },
+      "confidence": 0.993415840567284
+    },
+    "urgency": {
+      "type": "noul",
+      "noul": 0.9999207628120736,
+      "probabilities": {
+        "yes": 0.9999207628120736,
+        "no": 7.923718792632808e-05
+      },
+      "confidence": 0.9982135081621506
+    }
+  },
+  "usage": {
+    "input_tokens": 951,
+    "output_tokens": 6
+  },
+  "diagnostics": {
+    "phishing": {
+      "label_mass": 0.9924428116029459,
+      "argmax_is_label": true
+    },
+    "asks_card": {
+      "label_mass": 0.9947099433838141,
+      "argmax_is_label": true
+    },
+    "urgency": {
+      "label_mass": 0.9982926100612995,
+      "argmax_is_label": true
+    }
+  },
+  "joint": null
+}

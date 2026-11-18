@@ -1,0 +1,65 @@
+{
+  "model": "diffusiongemma",
+  "answers": [
+    {
+      "type": "predicate",
+      "name": "refund",
+      "probability": 0.9995326475025766
+    },
+    {
+      "type": "choice",
+      "name": "reason",
+      "choice": "damaged",
+      "probabilities": [
+        {
+          "value": "damaged",
+          "probability": 0.9999605211314169
+        },
+        {
+          "value": "late",
+          "probability": 1.3834436746214698e-05
+        },
+        {
+          "value": "wrong",
+          "probability": 2.5644431836795046e-05
+        }
+      ],
+      "confidence": 0.999747816757338
+    },
+    {
+      "type": "score",
+      "name": "anger",
+      "score": 1.9943760326887678,
+      "probabilities": [
+        {
+          "value": 0,
+          "label": "calm",
+          "probability": 0.00026411615607483166
+        },
+        {
+          "value": 1,
+          "label": "annoyed",
+          "probability": 0.005095734999082183
+        },
+        {
+          "value": 2,
+          "label": "angry",
+          "probability": 0.9946401488448429
+        }
+      ],
+      "confidence": 0.9940343304952891
+    }
+  ],
+  "usage": {
+    "input_tokens": 199,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 6,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 205
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "decision-9bf749e95a7ef2f7",
+  "object": "structured_decision",
+  "created": 1794975362,
+  "model": "diffusiongemma",
+  "answers": {
+    "declining": {
+      "type": "choice",
+      "choice": "west",
+      "probabilities": {
+        "east": 9.203237972236689e-05,
+        "west": 0.9972767215066259,
+        "both": 0.00241701919270248,
+        "neither": 0.00021422692094935105
+      },
+      "confidence": 0.29292990046645173
+    }
+  },
+  "usage": {
+    "input_tokens": 600,
+    "output_tokens": 2
+  },
+  "diagnostics": {
+    "declining": {
+      "label_mass": 0.29372980853690317,
+      "argmax_is_label": false
+    }
+  },
+  "joint": null
+}

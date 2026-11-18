@@ -1,0 +1,18 @@
+{
+  "model": "diffusiongemma",
+  "state": {
+    "from": "promo@win-big-prizes.biz",
+    "subject": "You WON!!!",
+    "body": "Congratulations! You won a $1000 gift card, click here to claim before midnight."
+  },
+  "questions": {
+    "spam": {
+      "type": "noul",
+      "instructions": "Is this email spam?",
+      "criteria": {
+        "true": "unsolicited, scam or bulk marketing",
+        "false": "legitimate personal or work mail"
+      }
+    }
+  }
+}

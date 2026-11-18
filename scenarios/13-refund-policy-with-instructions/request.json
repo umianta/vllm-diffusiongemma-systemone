@@ -1,0 +1,16 @@
+{
+  "model": "diffusiongemma",
+  "instructions": "Refund policy: full refund within 30 days of delivery if the item is unused. Opened software and gift cards are never refundable. Damaged-on-arrival items are always refundable.",
+  "state": {
+    "item": "gift card",
+    "days_since_delivery": 5,
+    "condition": "unused",
+    "reason": "changed my mind"
+  },
+  "questions": {
+    "eligible": {
+      "type": "noul",
+      "instructions": "Is this request eligible for a refund under the policy?"
+    }
+  }
+}

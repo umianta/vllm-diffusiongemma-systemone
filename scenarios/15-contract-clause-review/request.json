@@ -1,0 +1,41 @@
+{
+  "model": "diffusiongemma",
+  "instructions": "You review vendor contracts for a procurement team.",
+  "state": {
+    "document": "MASTER SERVICES AGREEMENT (excerpt)\n4.2 Term. This Agreement starts on the Effective Date and continues for twelve (12) months. It renews automatically for successive twelve-month terms unless either party gives written notice of non-renewal at least ninety (90) days before the end of the then-current term.\n7.1 Fees. Customer pays the fees in Order Forms within 45 days of invoice. Provider may raise fees by up to 12% at each renewal.\n9.3 Limitation of Liability. EXCEPT FOR BREACH OF CONFIDENTIALITY, EACH PARTY'S TOTAL LIABILITY IS LIMITED TO THE FEES PAID IN THE TWELVE MONTHS BEFORE THE CLAIM.\n11.4 Termination for convenience. Neither party may terminate for convenience.\n14.1 Governing Law. This Agreement is governed by the laws of the State of Delaware, USA."
+  },
+  "questions": {
+    "auto_renews": {
+      "type": "noul",
+      "instructions": "Does the contract renew automatically?"
+    },
+    "liability_cap": {
+      "type": "noul",
+      "instructions": "Is there a cap on liability?"
+    },
+    "exit": {
+      "type": "noul",
+      "instructions": "Can the customer terminate for convenience?"
+    },
+    "law": {
+      "type": "choice",
+      "instructions": "Which law governs the agreement?",
+      "criteria": {
+        "delaware": null,
+        "california": null,
+        "england": null,
+        "texas": null
+      }
+    },
+    "risk": {
+      "type": "score",
+      "instructions": "Overall commercial risk to the customer",
+      "criteria": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    }
+  }
+}

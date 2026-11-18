@@ -1,0 +1,36 @@
+{
+  "model": "diffusiongemma",
+  "state": {
+    "document": "Incident 2026-11-09 checkout outage (47 minutes)\nTimeline: 14:02 deploy of payments-svc v3.8 begins. 14:05 error rate rises to 35%. 14:20 on-call paged. 14:41 rollback started. 14:49 recovered.\nCause: v3.8 changed the connection-pool default from 50 to 5; under normal Friday load the pool was exhausted. The setting was not covered by load tests. No alert fired on pool saturation.\nImpact: ~12,000 failed checkouts, est. $410k lost revenue."
+  },
+  "questions": {
+    "root_cause": {
+      "type": "choice",
+      "instructions": "Root cause category",
+      "criteria": {
+        "deploy": "bad code or config change",
+        "hardware": "machine or disk failure",
+        "capacity": "traffic exceeded design",
+        "dependency": "third-party outage"
+      }
+    },
+    "detected_by_alert": {
+      "type": "noul",
+      "instructions": "Was the problem first detected by an automated alert on the root cause?"
+    },
+    "customer_impact": {
+      "type": "noul",
+      "instructions": "Were customers affected?"
+    },
+    "severity": {
+      "type": "score",
+      "instructions": "Incident severity",
+      "criteria": [
+        "sev4",
+        "sev3",
+        "sev2",
+        "sev1"
+      ]
+    }
+  }
+}

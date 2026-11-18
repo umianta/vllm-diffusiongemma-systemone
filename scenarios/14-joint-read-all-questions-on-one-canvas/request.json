@@ -1,0 +1,32 @@
+{
+  "model": "diffusiongemma",
+  "joint": true,
+  "state": {
+    "ticket": "I was double charged for my subscription this month, please fix it."
+  },
+  "questions": {
+    "urgent": {
+      "type": "noul",
+      "instructions": "Does the customer need a reply within the hour?"
+    },
+    "team": {
+      "type": "choice",
+      "instructions": "Which team owns this?",
+      "criteria": {
+        "infra": "outages",
+        "billing": "invoices, payments, charges",
+        "product": "features"
+      }
+    },
+    "severity": {
+      "type": "score",
+      "instructions": "How severe is the impact?",
+      "criteria": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    }
+  }
+}
