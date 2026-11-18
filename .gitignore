@@ -6,3 +6,4 @@ __pycache__/
 .vscode/
 .idea/
 run.log
+postman/local.postman_environment.json
